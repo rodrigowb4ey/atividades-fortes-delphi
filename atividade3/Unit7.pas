@@ -40,6 +40,13 @@ var
 begin
   Memo1.Clear;
   Numero := StrToInt(Edit1.Text);
+
+  if Numero = 0 then
+    begin
+      ShowMessage('0 não é um valor permitido!');
+      exit;
+    end;
+
   Fizz := 0;
   Buzz := 0;
   FizzBuzz := 0;
